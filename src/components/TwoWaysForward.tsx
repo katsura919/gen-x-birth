@@ -5,66 +5,41 @@ export default function TwoWaysForward() {
         <section className="bg-bg-light py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-                <h2 className="font-playfair mb-16 text-center text-3xl font-bold text-accent-dark sm:text-4xl">
-                    Two Ways to Move Forward
-                </h2>
+                <div className="relative overflow-hidden rounded-3xl bg-[#0F5A5C] shadow-2xl lg:flex lg:gap-x-20">
 
-                <div className="mx-auto grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2 lg:items-start">
-
-                    {/* Card 1: Quiz (Funnel Entry) */}
-                    <div className="flex flex-col rounded-3xl border-t-8 border-secondary bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-xl lg:p-10">
-                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-highlight-bg text-3xl">
-                            💡
-                        </div>
-                        <h3 className="font-dm-sans mb-2 text-sm font-bold uppercase tracking-widest text-secondary">
-                            Option 1: Get Clarity
-                        </h3>
-                        <h4 className="font-playfair mb-4 text-3xl font-bold text-accent-dark">
-                            Understand Your Stage
-                        </h4>
-                        <p className="font-inter mb-8 flex-auto text-lg text-text-primary">
-                            Name what's happening. Stop guessing. Get a personalized roadmap for your rebirth.
-                        </p>
-                        <div className="mt-6">
-                            <button className="w-full rounded-full bg-secondary py-4 font-dm-sans text-base font-bold uppercase tracking-wider text-white transition-colors hover:bg-cta-hover">
-                                Take the Quiz →
-                            </button>
-                            <p className="mt-4 text-center font-inter text-sm text-text-secondary">
-                                Free. 2–3 minutes.
+                    {/* Content - Left Side */}
+                    <div className="px-6 py-12 sm:px-12 md:pt-16 lg:w-1/2 lg:px-16 lg:py-24 relative z-10">
+                        <div className="mx-auto max-w-md text-center lg:mx-0 lg:text-left">
+                            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl font-playfair leading-tight">
+                                <span className="text-white">Ready to Transform Your</span><br />
+                                <span className="text-white">Leadership Journey?</span>
+                            </h2>
+                            <p className="mt-4 text-base leading-7 text-white/90 font-inter">
+                                It's time to take the next step in your professional growth.
+                                You're not alone, Gen X Rebirth has helped hundreds of professionals like you step into leadership with confidence and clarity.
                             </p>
+                            <div className="mt-8 flex items-center justify-center gap-x-6 lg:justify-start">
+                                <a
+                                    href="https://calendly.com/genxrebirth/new-meeting?back=1"
+                                    target="_blank"
+                                    className="rounded-md bg-white px-6 py-3 text-sm font-bold text-[#0F5A5C] shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white font-dm-sans uppercase tracking-wider transition-all hover:-translate-y-1"
+                                >
+                                    Book a Call
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Card 2: Book Call (High Value) */}
-                    <div className="flex flex-col rounded-3xl bg-accent-dark p-8 shadow-xl transition-all duration-300 hover:shadow-2xl lg:scale-105 lg:transform lg:p-10">
-                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-white/10 text-3xl backdrop-blur-sm">
-                            🔑
-                        </div>
-                        <h3 className="font-dm-sans mb-2 text-sm font-bold uppercase tracking-widest text-white/70">
-                            Option 2: Begin the Work
-                        </h3>
-                        <h4 className="font-playfair mb-4 text-3xl font-bold text-white">
-                            Private Coaching
-                        </h4>
-                        <ul className="font-inter mb-8 flex-auto space-y-3 text-lg text-bg-light/90">
-                            <li className="flex gap-3">
-                                <span className="text-secondary">✓</span> For women ready to own their authority
-                            </li>
-                            <li className="flex gap-3">
-                                <span className="text-secondary">✓</span> Done outsourcing their worth
-                            </li>
-                            <li className="flex gap-3">
-                                <span className="text-secondary">✓</span> Ready to rebuild on their own terms
-                            </li>
-                        </ul>
-                        <div className="mt-6">
-                            <button className="w-full rounded-full bg-white py-4 font-dm-sans text-base font-bold uppercase tracking-wider text-accent-dark transition-colors hover:bg-bg-light">
-                                Book a Call →
-                            </button>
-                            <p className="mt-4 text-center font-inter text-sm text-white/60">
-                                Serious inquiries only.
-                            </p>
-                        </div>
+                    {/* Image - Right Side with Fade */}
+                    <div className="relative h-64 lg:h-auto lg:w-1/2">
+                        {/* Gradient Mask Overlay - Mobile Only */}
+                        <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0F5A5C] via-transparent to-transparent lg:hidden"></div>
+
+                        <img
+                            className="h-full w-full object-cover object-center"
+                            src="/images/6.png"
+                            alt="Transformation success"
+                        />
                     </div>
 
                 </div>

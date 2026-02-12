@@ -25,13 +25,24 @@ export default function MomentOfChoice() {
 
     return (
         <section id="moment-of-choice" className="relative overflow-hidden bg-gradient-to-br from-accent-dark to-[#2A2A35] py-24 sm:py-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+
+            {/* Background Image for "New Way" - visible on right side */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/images/6.png"
+                    alt="New beginning"
+                    className="absolute right-0 h-full w-full object-cover opacity-50 lg:w-1/2 lg:opacity-95"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#2A2A35] via-[#2A2A35]/80 to-transparent"></div>
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
 
                 <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
 
                     {/* Left Column - The Old Way */}
                     <div className={`text-center lg:text-right transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'}`}>
-                        <div className="space-y-6 text-white/40">
+                        <div className="space-y-6 text-white">
                             <p className="font-inter text-2xl font-light">Keep pushing...</p>
                             <p className="font-inter text-2xl font-light">Keep waiting...</p>
                             <p className="font-inter text-2xl font-light">Keep telling yourself "it is what it is"...</p>
@@ -46,8 +57,9 @@ export default function MomentOfChoice() {
 
                     {/* Right Column - The New Way */}
                     <div className={`text-center lg:text-left transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-12 opacity-0'}`}>
-                        <h2 className="font-playfair text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-                            Or you can decide that your next chapter <span className="text-secondary shadow-[0_4px_0_0_#6EC6CA] shadow-secondary">belongs to you</span>.
+                        <h2 className="font-playfair text-4xl font-bold leading-tight text-secondary sm:text-5xl md:text-6xl">
+                            <span className='text-white'>
+                                Or you can decide that your next chapter test </span><span className="text-secondary shadow-[0_4px_0_0_#fff] shadow-secondary">belongs to you</span>.
                         </h2>
                     </div>
                 </div>

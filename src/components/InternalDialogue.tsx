@@ -31,8 +31,19 @@ export default function InternalDialogue() {
     ];
 
     return (
-        <section id="internal-dialogue" className="bg-bg-light py-24 sm:py-32">
-            <div className="mx-auto max-w-4xl px-6">
+        <section id="internal-dialogue" className="relative overflow-hidden bg-bg-light py-24 sm:py-32">
+
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/images/3.png"
+                    alt="Introspective mood"
+                    className="h-full w-full object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-bg-light via-bg-light/95 to-bg-light"></div>
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-4xl px-6">
 
                 {/* Decorative Quote Mark */}
                 <div className="mb-12 flex justify-center opacity-30">

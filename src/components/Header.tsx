@@ -32,7 +32,7 @@ export default function Header() {
                 {/* Desktop Navigation / CTAs */}
                 <div className="hidden items-center gap-4 sm:flex">
                     <button className="rounded-full border border-accent-dark px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-accent-dark transition-all hover:bg-accent-dark hover:text-white">
-                        Book a Call
+                        <a href="https://calendly.com/genxrebirth/new-meeting?back=1" target='_blank'>Book a Call</a>
                     </button>
 
                     <button className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-cta-hover hover:shadow-lg">

@@ -70,8 +70,17 @@ export default function TheRealIssue() {
                     ))}
                 </div>
 
+                {/* Visual Support with Image */}
+                <div className={`mx-auto mt-16 max-w-3xl overflow-hidden rounded-2xl shadow-lg transition-all duration-1000 delay-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                    <img
+                        src="/images/5.png"
+                        alt="Breaking the pattern"
+                        className="h-64 w-full object-cover"
+                    />
+                </div>
+
                 {/* Closing */}
-                <div className={`mt-20 transition-all duration-1000 delay-1200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`mt-12 transition-all duration-1000 delay-1200 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
                     <p className="font-inter text-lg text-text-primary">
                         It worked for a while. It doesn't work anymore. <span className="font-bold text-secondary">That's good news.</span>
                     </p>

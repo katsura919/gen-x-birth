@@ -53,7 +53,7 @@ export default function Hero() {
                 </div>
 
                 {/* RIGHT COLUMN - Hero Image with Decorative Elements */}
-                <div className={`relative transition-all duration-1000 delay-300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
+                <div className={`relative transition-all duration-1000 delay-300 hidden lg:block ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'}`}>
 
                     {/* Circular Background Shape */}
                     <div className="absolute right-0 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-accent-dark opacity-20 blur-3xl"></div>
@@ -103,21 +103,6 @@ export default function Hero() {
                     </div>
                 </div>
 
-            </div>
-
-            {/* Scroll Down Indicator */}
-            <div className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 animate-bounce">
-                <svg
-                    className="h-6 w-6 text-text-secondary/60"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
             </div>
         </section>
     );

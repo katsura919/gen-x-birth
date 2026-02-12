@@ -35,6 +35,11 @@ export default function WhatChanges() {
             {/* Subtle Radial Background */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(244,240,248,1)_0%,rgba(253,251,255,0)_70%)]"></div>
 
+            {/* Background Image Accent */}
+            <div className="absolute bottom-0 right-0 h-full w-1/3 opacity-5 pointer-events-none">
+                <img src="/images/7.png" alt="Peaceful change" className="h-full w-full object-cover mask-image-linear-to-l" style={{ maskImage: 'linear-gradient(to left, black, transparent)' }} />
+            </div>
+
             <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
 
                 {/* Hero-style Quote */}

@@ -15,13 +15,12 @@ export default function Home() {
     <main>
       <Hero />
       <WhatsHappening />
+      <WhatKeepsYouStuck />
       <NotSelfHelp />
       <QuizCTA placement="first" />
       <InternalDialogue />
-      <WhatKeepsYouStuck />
       <TheRealIssue />
       <WhatChanges />
-      <MomentOfChoice />
       <TwoWaysForward />
       <Footer />
     </main>
