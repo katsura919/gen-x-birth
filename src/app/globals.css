@@ -1,26 +1,110 @@
 @import "tailwindcss";
 
+/* ========================================
+   QUIET POWER THEME - COLOR PALETTE
+   ======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary Colors */
+  --primary: #7B6A9B;           /* Deep Lavender - Headlines, section accents, hover states */
+  --secondary: #6EC6CA;         /* Soft Turquoise - CTA buttons, highlights, key phrases */
+  --accent-dark: #4A3766;       /* Muted Plum - Hero text, strong headers, footer */
+  
+  /* Background Colors */
+  --bg-light: #F4F0F8;          /* Whisper Lavender - Alternating section backgrounds */
+  --bg-main: #FDFBFF;           /* Warm White - Primary page background */
+  
+  /* Text Colors */
+  --text-primary: #2E2E3A;      /* Charcoal Slate - Body copy */
+  --text-secondary: #8A8A99;    /* Dusty Gray - Subtext, captions, secondary info */
+  
+  /* Interactive Colors */
+  --cta-hover: #3A9EA3;         /* Deep Teal - Button hover state */
+  --emotional-accent: #D4A9B8;  /* Blush Rose - Subtle dividers, quote marks, small accents */
+  --highlight-bg: #E8F6F7;      /* Pale Turquoise - Quote blocks, callout boxes */
 }
+
+/* ========================================
+   TAILWIND V4 THEME CONFIGURATION
+   ======================================== */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Color Tokens */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent-dark: var(--accent-dark);
+  --color-bg-light: var(--bg-light);
+  --color-bg-main: var(--bg-main);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-cta-hover: var(--cta-hover);
+  --color-emotional-accent: var(--emotional-accent);
+  --color-highlight-bg: var(--highlight-bg);
+  
+  /* Font Families */
+  --font-headline: var(--font-playfair);
+  --font-body: var(--font-inter);
+  --font-callout: var(--font-cormorant);
+  --font-button: var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* ========================================
+   BASE TYPOGRAPHY STYLES
+   ======================================== */
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+  color: var(--accent-dark);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Typography Utilities */
+.text-headline {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-weight: 700;
+  color: var(--accent-dark);
+}
+
+.text-body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+.text-callout {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-style: italic;
+  color: var(--primary);
+}
+
+/* Button Base Styles */
+.btn-cta {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--secondary);
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--cta-hover);
+  transform: translateY(-2px);
 }
