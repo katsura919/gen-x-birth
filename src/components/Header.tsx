@@ -27,7 +27,7 @@ export default function Header() {
 
                 {/* Logo */}
                 <div className="flex-shrink-0">
-                    <Logo className={`h-10 w-auto text-accent-dark transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`} />
+                    <a href='/'><Logo className={`h-10 w-auto text-accent-dark transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`} /></a>
                 </div>
 
                 {/* Desktop Navigation / CTAs */}
@@ -36,8 +36,8 @@ export default function Header() {
                         <a href="https://calendly.com/genxrebirth/new-meeting?back=1" target='_blank'>Book a Call</a>
                     </button>
 
-                    <button className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-cta-hover hover:shadow-lg">
-                        Take Quiz
+                    <button className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-cta-hover hover:shadow-lg cursor-pointer">
+                        <a href="/quiz">Take Quiz</a>
                     </button>
                 </div>
 

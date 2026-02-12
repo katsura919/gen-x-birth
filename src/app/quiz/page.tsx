@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
 import { questions, resultsData } from '../../data/quiz.data'
-
+import Footer from '@/components/Footer';
 
 export default function QuizPage() {
     const [step, setStep] = useState<'intro' | 'quiz' | 'email' | 'results'>('intro');
@@ -58,12 +58,12 @@ export default function QuizPage() {
     };
 
     return (
-        <main className="min-h-screen bg-bg-main pt-40 pb-12">
+        <main className="min-h-screen bg-bg-main pt-60 ">
             <div className="mx-auto max-w-3xl px-6 lg:px-8">
 
                 {/* Intro Step */}
                 {step === 'intro' && (
-                    <div className="space-y-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-700">
+                    <div className="space-y-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-700 h-screen">
                         <h1 className="font-playfair text-4xl font-bold text-accent-dark sm:text-5xl md:text-6xl">
                             Have You Been Living for Everyone Else?
                         </h1>
@@ -94,7 +94,7 @@ export default function QuizPage() {
 
                 {/* Quiz Step */}
                 {step === 'quiz' && (
-                    <div className="mx-auto max-w-2xl animate-in fade-in slide-in-from-right-8 duration-500">
+                    <div className="mx-auto max-w-2xl animate-in fade-in slide-in-from-right-8 duration-500 pb-20">
                         {/* Progress */}
                         <div className="mb-8">
                             <div className="flex justify-between text-sm font-medium text-text-secondary mb-2">
@@ -154,7 +154,7 @@ export default function QuizPage() {
 
                 {/* Email Gate */}
                 {step === 'email' && (
-                    <div className="mx-auto max-w-md text-center animate-in fade-in zoom-in-95 duration-500 bg-white p-10 rounded-3xl shadow-xl">
+                    <div className="mx-auto max-w-md text-center animate-in fade-in zoom-in-95 duration-500 bg-white p-10 mb-20 rounded-3xl shadow-xl">
                         <div className="mb-6 flex justify-center">
                             <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
@@ -266,7 +266,7 @@ export default function QuizPage() {
                         </div>
 
                         {/* CTA Footer */}
-                        <div className="rounded-3xl bg-white p-8 md:p-12 text-center shadow-xl ring-1 ring-gray-100 relative overflow-hidden">
+                        <div className="rounded-3xl bg-white p-8 md:p-12 text-center shadow-xl ring-1 ring-gray-100 relative overflow-hidden mb-20">
                             <div className="relative z-10">
                                 <h2 className="mb-4 font-playfair text-3xl font-bold text-accent-dark">You Are Not Alone</h2>
                                 <p className="mb-8 font-inter text-lg text-text-primary max-w-2xl mx-auto">
@@ -290,6 +290,7 @@ export default function QuizPage() {
                 )}
 
             </div>
+            <Footer />
         </main>
     );
 }

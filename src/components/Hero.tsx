@@ -39,12 +39,12 @@ export default function Hero() {
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                             {/* Primary CTA - Take the Free Quiz */}
                             <button className="group relative overflow-hidden rounded-full bg-secondary px-8 py-4 font-dm-sans text-base font-medium uppercase tracking-wider text-white shadow-lg transition-all duration-300 hover:bg-cta-hover hover:shadow-xl sm:px-10 cursor-pointer">
-                                <span className="relative z-10">Take the Free Quiz</span>
+                                <a href="/quiz">Take the Free Quiz</a>
                             </button>
 
                             {/* Secondary CTA - Book a Call */}
                             <button className="rounded-full border-2 border-accent-dark bg-accent-dark px-8 py-4 font-dm-sans text-base font-medium uppercase tracking-wider text-white transition-all duration-300 hover:text-white sm:px-10 cursor-pointer">
-                                Book a Call
+                                <a href="https://calendly.com/genxrebirth/new-meeting?back=1" target='_blank'>Book a Call</a>
                             </button>
                         </div>
 
