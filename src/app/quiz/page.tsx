@@ -308,8 +308,8 @@ export default function QuizPage() {
 
                 {/* Rebirth */}
                 <div className="rounded-3xl bg-accent-dark p-8 md:p-10 shadow-lg text-white">
-                  <h3 className="mb-6 font-playfair text-2xl font-bold">
-                    What Rebirth Looks Like for You
+                  <h3 className="mb-6 font-playfair text-2xl font-bold text-white">
+                    <span className="text-white">What Rebirth Looks Like for You</span>
                   </h3>
                   <ul className="space-y-4">
                     {resultsData[calculatedResult].rebirth.map((item, idx) => (
