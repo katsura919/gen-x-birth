@@ -20,7 +20,7 @@ export default function Hero() {
                 <div className={`space-y-6 transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'}`}>
 
                     {/* Tagline */}
-                    <p className="font-inter text-sm font-medium tracking-wide text-text-secondary">
+                    <p className="font-inter text-xl font-medium tracking-wide text-text-secondary">
                         Real growth, real results
                     </p>
 
@@ -30,7 +30,7 @@ export default function Hero() {
                     </h1>
 
                     {/* Description */}
-                    <p className="font-inter max-w-xl text-base leading-relaxed text-text-secondary sm:text-lg">
+                    <p className="font-inter max-w-xl text-base leading-relaxed text-text-secondary sm:text-xl">
                         Gen X Rebirth is for women who are done living in reaction mode and ready to rebuild a life that actually fits who they are now.
                     </p>
 

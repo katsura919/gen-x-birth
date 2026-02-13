@@ -32,8 +32,8 @@ export default function Header() {
 
                 {/* Desktop Navigation / CTAs */}
                 <div className="hidden items-center gap-4 sm:flex">
-                    <button className="rounded-full border border-accent-dark px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-accent-dark transition-all hover:bg-accent-dark hover:text-white">
-                        <a href="https://calendly.com/genxrebirth/new-meeting?back=1" target='_blank'>Book a Call</a>
+                    <button className="rounded-full border border-accent-dark px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider transition-all bg-accent-dark text-white">
+                        <a href="/booking">Book a Call</a>
                     </button>
 
                     <button className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-cta-hover hover:shadow-lg cursor-pointer">
@@ -66,14 +66,14 @@ export default function Header() {
                 <div className="absolute top-full left-0 w-full bg-white sm:hidden">
                     <div className="flex flex-col space-y-4 p-6">
                         <a
-                            href="https://calendly.com/genxrebirth/new-meeting?back=1"
+                            href="/booking"
                             target='_blank'
                             className="text-center font-dm-sans text-sm font-bold uppercase tracking-wider text-accent-dark py-3 border border-accent-dark rounded-full hover:bg-accent-dark hover:text-white transition-colors"
                         >
                             Book a Call
                         </a>
                         <button className="w-full rounded-full bg-secondary py-3 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all hover:bg-cta-hover">
-                            Take Quiz
+                            <a href='/quiz'>Take Quiz</a>
                         </button>
                     </div>
                 </div>

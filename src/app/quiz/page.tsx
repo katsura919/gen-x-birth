@@ -38,15 +38,16 @@ export default function QuizPage() {
             console.error("Error submitting contact:", error);
         }
 
-        const counts: Record<string, number> = { A: 0, B: 0, C: 0, D: 0 };
+        const counts: Record<string, number> = { A: 0, B: 0, C: 0 };
         Object.values(answers).forEach(val => {
+            // Only count valid categories, ignore 'N' or others
             if (counts[val] !== undefined) counts[val]++;
         });
 
         // Find dominant letter
-        let max = 0;
+        let max = -1;
         let dominant = 'A';
-        (['A', 'B', 'C', 'D'] as const).forEach(char => {
+        (['A', 'B', 'C'] as const).forEach(char => {
             if (counts[char] > max) {
                 max = counts[char];
                 dominant = char;
@@ -67,11 +68,11 @@ export default function QuizPage() {
                         <h1 className="font-playfair text-4xl font-bold text-accent-dark sm:text-5xl md:text-6xl">
                             Have You Been Living for Everyone Else?
                         </h1>
-                        <p className="font-dm-sans text-lg font-medium tracking-wide text-primary">
+                        <p className="font-dm-sans text-xl font-medium tracking-wide text-primary">
                             A Midlife Awakening Quiz for Gen X Women (1965–1980)
                         </p>
                         <hr className="mx-auto w-24 border-primary/20" />
-                        <div className="mx-auto max-w-2xl space-y-4 font-inter text-lg text-text-primary/80">
+                        <div className="mx-auto max-w-2xl space-y-4 font-inter text-xl text-text-primary/80">
                             <p>Chronic Over-Giving • Toxic Relationships • Rediscovering Your Passion</p>
                             <p>
                                 Welcome, Gen X Woman. This gentle quiz is designed to help you reflect on chronic over-giving, toxic or draining
@@ -84,7 +85,7 @@ export default function QuizPage() {
                         <div className="pt-8">
                             <button
                                 onClick={() => setStep('quiz')}
-                                className="rounded-full bg-accent-dark px-10 py-4 text-lg font-bold text-white shadow-lg hover:bg-accent-dark/90 transition-all hover:-translate-y-1"
+                                className="rounded-full bg-accent-dark px-10 py-4 text-xl font-bold text-white shadow-lg hover:bg-accent-dark/90 transition-all hover:-translate-y-1 cursor-pointer"
                             >
                                 Start Quiz
                             </button>
@@ -97,21 +98,21 @@ export default function QuizPage() {
                     <div className="mx-auto max-w-2xl animate-in fade-in slide-in-from-right-8 duration-500 pb-20">
                         {/* Progress */}
                         <div className="mb-8">
-                            <div className="flex justify-between text-sm font-medium text-text-secondary mb-2">
+                            <div className="flex justify-between text-base font-medium text-text-secondary mb-2">
                                 <span>Question {currentQuestion + 1} of {questions.length}</span>
                                 <span>{Math.round(((currentQuestion + 1) / questions.length) * 100)}%</span>
                             </div>
-                            <div className="h-2 w-full rounded-full bg-secondary/10">
+                            <div className="h-3 w-full rounded-full bg-secondary/10">
                                 <div
-                                    className="h-2 rounded-full bg-primary transition-all duration-300"
+                                    className="h-3 rounded-full bg-primary transition-all duration-300"
                                     style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
                                 ></div>
                             </div>
                         </div>
 
                         {/* Question */}
-                        <div className="mb-10 min-h-[120px]">
-                            <h2 className="font-playfair text-3xl font-bold leading-tight text-text-primary">
+                        <div className="mb-10 min-h-[140px]">
+                            <h2 className="font-playfair text-4xl font-bold leading-tight text-text-primary">
                                 {questions[currentQuestion].text}
                             </h2>
                         </div>
@@ -122,29 +123,29 @@ export default function QuizPage() {
                                 <button
                                     key={option.value}
                                     onClick={() => handleOptionSelect(option.value)}
-                                    className={`w-full rounded-xl border-2 p-6 text-left transition-all duration-200 ${answers[currentQuestion] === option.value
+                                    className={`w-full rounded-xl border-2 p-8 text-left transition-all duration-200 ${answers[currentQuestion] === option.value
                                         ? 'border-primary bg-primary/5 text-accent-dark shadow-md'
                                         : 'border-transparent bg-white text-text-primary hover:border-gray-200 hover:bg-gray-50 shadow-sm'
                                         }`}
                                 >
-                                    <div className="flex items-center gap-4">
-                                        <span className={`flex h-8 w-8 items-center justify-center rounded-full border text-sm font-bold ${answers[currentQuestion] === option.value
+                                    <div className="flex items-center gap-6">
+                                        <span className={`flex h-10 w-10 min-w-10 items-center justify-center rounded-full border text-base font-bold ${answers[currentQuestion] === option.value
                                             ? 'border-primary bg-primary text-white'
                                             : 'border-gray-300 text-gray-500'
                                             }`}>
-                                            {option.value}
+                                            {option.text.charAt(0)}
                                         </span>
-                                        <span className="text-lg font-medium">{option.text}</span>
+                                        <span className="text-2xl font-medium">{option.text}</span>
                                     </div>
                                 </button>
                             ))}
                         </div>
 
-                        <div className="mt-10 flex justify-end">
+                        <div className="mt-12 flex justify-end">
                             <button
                                 onClick={handleNext}
                                 disabled={!answers[currentQuestion]}
-                                className="rounded-full bg-accent-dark px-10 py-3 text-base font-bold text-white shadow-lg transition-all hover:bg-accent-dark/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="rounded-full bg-accent-dark px-12 py-4 text-lg font-bold text-white shadow-lg transition-all hover:bg-accent-dark/90 disabled:opacity-50 disabled:cursor-not-allowed"
                             >
                                 {currentQuestion === questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
                             </button>
@@ -294,3 +295,4 @@ export default function QuizPage() {
         </main>
     );
 }
+

@@ -1,102 +1,127 @@
 export const questions = [
+    // The Silent Anchor (A)
     {
         id: 1,
-        text: "When someone asks for help, your first reaction is:",
+        text: "Do you feel uncomfortable when you are not being productive or helping someone?",
         options: [
-            { value: 'A', text: "I automatically say yes, even when I’m exhausted" },
-            { value: 'B', text: "I help but feel resentful" },
-            { value: 'C', text: "I pause and check in with myself" },
-            { value: 'D', text: "I comfortably say no" }
+            { value: 'A', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 2,
-        text: "In your closest relationships, you usually feel:",
+        text: "Do you often suppress your own needs to keep peace in your home or relationships?",
         options: [
-            { value: 'A', text: "Drained and emotionally responsible" },
-            { value: 'B', text: "Needed but not supported" },
-            { value: 'C', text: "Mostly balanced" },
-            { value: 'D', text: "Safe and respected" }
+            { value: 'A', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 3,
-        text: "How often do you put your own needs last?",
+        text: "Do you feel guilty when you take time for yourself?",
         options: [
-            { value: 'A', text: "Almost always" },
-            { value: 'B', text: "Often" },
-            { value: 'C', text: "Sometimes" },
-            { value: 'D', text: "Rarely" }
+            { value: 'A', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 4,
-        text: "Which statement feels most true?",
+        text: "Are you typically the emotional regulator in your family or friendships?",
         options: [
-            { value: 'A', text: "I don’t know who I am outside of being useful" },
-            { value: 'B', text: "I’m questioning my role" },
-            { value: 'C', text: "I’m rediscovering myself" },
-            { value: 'D', text: "I feel aligned" }
+            { value: 'A', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 5,
-        text: "When conflict arises, you:",
+        text: "Do you equate being strong with never asking for support?",
         options: [
-            { value: 'A', text: "Stay silent" },
-            { value: 'B', text: "Apologize even when not wrong" },
-            { value: 'C', text: "Speak up but anxious" },
-            { value: 'D', text: "Express myself clearly" }
+            { value: 'A', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
+
+    // The Pattern Breaker (B)
     {
         id: 6,
-        text: "Your love history feels like:",
+        text: "Have you stayed in relationships longer than you should have because you saw someone’s potential?",
         options: [
-            { value: 'A', text: "Repeated toxic patterns" },
-            { value: 'B', text: "Giving more than receiving" },
-            { value: 'C', text: "Learning boundaries" },
-            { value: 'D', text: "Mutual respect" }
+            { value: 'B', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 7,
-        text: "Your current life focus is:",
+        text: "Do you tend to over-explain or defend your feelings in conflict?",
         options: [
-            { value: 'A', text: "Survival" },
-            { value: 'B', text: "Healing" },
-            { value: 'C', text: "Growth" },
-            { value: 'D', text: "Purpose" }
+            { value: 'B', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 8,
-        text: "When you imagine your future, you feel:",
+        text: "Have you confused emotional intensity with deep connection?",
         options: [
-            { value: 'A', text: "Afraid" },
-            { value: 'B', text: "Curious" },
-            { value: 'C', text: "Hopeful" },
-            { value: 'D', text: "Empowered" }
+            { value: 'B', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 9,
-        text: "What drains you most?",
+        text: "Do you second-guess your perception after setting boundaries?",
         options: [
-            { value: 'A', text: "People-pleasing" },
-            { value: 'B', text: "Guilt" },
-            { value: 'C', text: "Fear of disappointing" },
-            { value: 'D', text: "Very little" }
+            { value: 'B', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     },
     {
         id: 10,
-        text: "Which sentence resonates?",
+        text: "Are you learning to choose stability over chaos in relationships?",
         options: [
-            { value: 'A', text: "I lived my life for others" },
-            { value: 'B', text: "I’m waking up" },
-            { value: 'C', text: "I choose myself" },
-            { value: 'D', text: "I live a life led by me" }
+            { value: 'B', text: "Yes" },
+            { value: 'N', text: "No" }
+        ]
+    },
+
+    // The Quiet Awakener (C)
+    {
+        id: 11,
+        text: "Do you feel a quiet dissatisfaction even though your life looks stable on the outside?",
+        options: [
+            { value: 'C', text: "Yes" },
+            { value: 'N', text: "No" }
+        ]
+    },
+    {
+        id: 12,
+        text: "Have you recently questioned roles you’ve carried for decades?",
+        options: [
+            { value: 'C', text: "Yes" },
+            { value: 'N', text: "No" }
+        ]
+    },
+    {
+        id: 13,
+        text: "Do you struggle to answer what you truly want in this chapter of life?",
+        options: [
+            { value: 'C', text: "Yes" },
+            { value: 'N', text: "No" }
+        ]
+    },
+    {
+        id: 14,
+        text: "Are you craving alignment more than approval?",
+        options: [
+            { value: 'C', text: "Yes" },
+            { value: 'N', text: "No" }
+        ]
+    },
+    {
+        id: 15,
+        text: "Do you feel called to rediscover passions you once put aside?",
+        options: [
+            { value: 'C', text: "Yes" },
+            { value: 'N', text: "No" }
         ]
     }
 ];
@@ -162,37 +187,6 @@ export const resultsData: Record<string, { title: string; subtitle?: string; cor
         ]
     },
     'C': {
-        title: "The Quiet Awakener",
-        subtitle: "(Rediscovering Passion & Identity)",
-        corePattern: [
-            "Your life looks stable from the outside.",
-            "But inside? There’s a low-grade dissatisfaction you can’t ignore anymore.",
-            "You’ve done what was expected.",
-            "You’ve fulfilled roles.",
-            "You’ve kept things running.",
-            "Now you’re asking: “Is this it?”"
-        ],
-        whatsHappening: [
-            "You’ve outgrown a version of yourself.",
-            "Not dramatically.",
-            "Not impulsively.",
-            "Just truthfully.",
-            "You don’t need escape.",
-            "You need alignment."
-        ],
-        hiddenCost: [
-            "You struggle to answer: “What do I want now?”",
-            "Because for decades, the question was: “What do they need?”"
-        ],
-        rebirth: [
-            "Reclaiming dormant desires",
-            "Making decisions from identity, not obligation",
-            "Designing a chapter that reflects who you are now",
-            "You’re not lost.",
-            "You’re emerging."
-        ]
-    },
-    'D': {
         title: "The Quiet Awakener",
         subtitle: "(Rediscovering Passion & Identity)",
         corePattern: [
