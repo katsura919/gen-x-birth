@@ -46,14 +46,14 @@ export default function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             href="/booking"
-            className="rounded-full border border-accent-dark bg-accent-dark px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white hover:bg-white hover:text-accent-dark cursor-pointer"
+            className="rounded-full border border-accent-dark bg-accent-dark px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white hover:bg-primary hover:text-white cursor-pointer transition-colors duration-500"
           >
             Book a Call
           </a>
 
           <a
             href="/quiz"
-            className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-cta-hover hover:shadow-lg cursor-pointer"
+            className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-cta-hover hover:shadow-lg cursor-pointer transition-colors duration-500  "
           >
             Take Quiz
           </a>

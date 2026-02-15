@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
+import Aurora from "@/components/Aurora";
+
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,8 +14,11 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[90vh] w-full overflow-hidden bg-bg-main">
+
       {/* Main Container - Two Column Layout */}
-      <div className="relative mx-auto grid min-h-[90vh] max-w-7xl grid-cols-1 items-center gap-12 px-6 mt-20 pb-12 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-12">
+      <div className="relative z-10 mx-auto grid min-h-[90vh] max-w-7xl grid-cols-1 items-center gap-12 px-6 mt-20 pb-12 lg:grid-cols-2 lg:gap-16 lg:px-12 lg:py-12">
+
+
         {/* LEFT COLUMN - Text Content */}
         <div
           className={`space-y-6 transition-all duration-1000 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"}`}
@@ -43,7 +48,7 @@ export default function Hero() {
               </button>
 
               {/* Secondary CTA - Book a Call */}
-              <button className="rounded-full border-2 border-accent-dark bg-accent-dark px-8 py-4 font-dm-sans text-base font-medium uppercase tracking-wider text-white transition-all duration-300 hover:text-white sm:px-10 cursor-pointer">
+              <button className="rounded-full border-2 border-accent-dark bg-accent-dark px-8 py-4 font-dm-sans text-base font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-primary hover:text-white sm:px-10 cursor-pointer">
                 <a
                   href="https://calendly.com/genxrebirth/new-meeting?back=1"
                   target="_blank"
