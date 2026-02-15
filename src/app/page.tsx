@@ -17,11 +17,10 @@ export default function Home() {
   return (
     <ReactLenis root>
       <Hero />
-      <WhatsHappening />
       <WhatKeepsYouStuck />
-      <AboutMe />
-      <WhatChanges />
+      <WhatsHappening />
       <MeetCeleste />
+      <AboutMe />
       <TwoWaysForward />
     </ReactLenis>
   );

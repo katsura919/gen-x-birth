@@ -29,7 +29,7 @@ export default function MeetCeleste() {
     return (
         <section
             id="meet-celeste"
-            className="bg-accent-dark py-20 lg:py-32 relative overflow-hidden"
+            className="bg-main py-20 lg:py-32 relative overflow-hidden"
         >
             {/* Decorative Background Mesh */}
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />

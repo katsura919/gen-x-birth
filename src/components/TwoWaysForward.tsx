@@ -2,7 +2,7 @@
 
 export default function TwoWaysForward() {
     return (
-        <section className="bg-bg-main py-24 sm:py-32">
+        <section className="bg-main pb-16 sm:py-32">
             <div className="mx-auto max-w-[1400px] px-6 lg:px-8">
 
                 <div className="relative overflow-hidden rounded-[2.5rem] bg-secondary shadow-2xl lg:flex lg:items-center lg:gap-x-20">

@@ -47,11 +47,11 @@ export default function WhatKeepsYouStuck() {
     ];
 
     return (
-        <section id="what-keeps-you-stuck" className="bg-bg-main py-24 sm:py-32">
+        <section id="what-keeps-you-stuck" className="bg-highlight-bg py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                 {/* Headline */}
-                <h2 className={`mb-16 text-center font-playfair text-3xl font-bold text-accent-dark sm:text-4xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                <h2 className={`font-playfair mb-16 text-center text-4xl font-bold italic text-accent-dark sm:text-5xl md:text-6xl lg:text-7xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
                     <span className="text-primary">What Keeps You Stuck</span>
                 </h2>
 

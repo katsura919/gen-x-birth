@@ -11,7 +11,7 @@ export default function Footer() {
 
                     {/* Column 1: Brand */}
                     <div className="space-y-6 lg:col-span-2">
-                        <Link href="/" className="inline-block">
+                        <Link href="/" className="inline-block ">
                             <Logo className="h-10 w-auto text-white" />
                         </Link>
                         <p className="font-inter text-white/80 leading-relaxed">
