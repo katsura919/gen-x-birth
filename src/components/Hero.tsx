@@ -50,8 +50,7 @@ export default function Hero() {
               {/* Secondary CTA - Book a Call */}
               <button className="rounded-full border-2 border-accent-dark bg-accent-dark px-8 py-4 font-dm-sans text-base font-medium uppercase tracking-wider text-white transition-all duration-300 hover:bg-primary hover:text-white sm:px-10 cursor-pointer">
                 <a
-                  href="https://calendly.com/genxrebirth/new-meeting?back=1"
-                  target="_blank"
+                  href="/booking"
                 >
                   Book a Call
                 </a>
@@ -79,12 +78,6 @@ export default function Hero() {
               />
             </div>
           </div>
-
-
-
-
-
-
         </div>
       </div>
     </section>
