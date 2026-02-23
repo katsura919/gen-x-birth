@@ -51,10 +51,10 @@ export default function Header() {
           </a>
 
           <a
-            href="/quiz"
+            href="/webinar"
             className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-cta-hover hover:shadow-lg cursor-pointer transition-colors duration-500  "
           >
-            Take Quiz
+            Join Webinar
           </a>
         </div>
 
@@ -109,11 +109,11 @@ export default function Header() {
             </a>
 
             <a
-              href="/quiz"
+              href="/webinar"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full max-w-xs rounded-full bg-secondary py-3.5 text-center font-dm-sans text-base font-bold uppercase tracking-wider text-white shadow-lg"
             >
-              Take Quiz
+              Join Webinar
             </a>
           </div>
         </div>

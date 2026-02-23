@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { firstName, lastName, email, company } = body;
+    const { firstName, lastName, email, company, tags } = body;
 
     const contactData = {
       firstName: firstName || "",
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
       locationId: "T6ojFvDKaoqpBlbXWoOB",
       companyName: company || undefined,
       source: "Gen X Rebirth",
-      tags: ["Quiz Lead"],
+      tags: tags && Array.isArray(tags) ? tags : ["Quiz Lead"],
     };
 
     const ghlResponse = await fetch(`${process.env.GHL_BASE_URL}contacts/`, {
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ success: true, data: responseData });
-    
+
   } catch (error) {
     console.error("Error creating contact:", error);
     return NextResponse.json(
