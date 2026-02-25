@@ -6,7 +6,8 @@ import {
     CheckCircle2,
     Sparkles,
     AlertCircle,
-    Zap
+    Zap,
+    Clock
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -35,9 +36,20 @@ export default function WebinarPage() {
                             </h1>
 
                             <div className="font-inter text-lg sm:text-xl text-text-primary leading-relaxed max-w-xl space-y-4">
-                                <p className="font-bold text-primary">Gen X Professionals:</p>
                                 <p>Laid Off? Burned Out? Still in the Corporate Grind?</p>
                                 <p className="text-secondary font-semibold italic">It’s Time to Leverage Your Experience — Not Start Over.</p>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row gap-6 mt-8">
+                                <div className="flex items-center gap-3">
+                                    <div className="p-3 rounded-xl bg-accent-dark/30 text-primary">
+                                        <Clock className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <p className="font-inter text-sm text-text-secondary uppercase tracking-wider">Date & Time</p>
+                                        <p className="font-playfair text-lg font-bold text-primary">Tuesday, April 28th | 12 NN EST</p>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
 
@@ -50,7 +62,7 @@ export default function WebinarPage() {
                             <h2 className="font-playfair text-3xl font-bold text-white mb-6 text-center">
                                 <span className="text-white">Reserve Your Spot</span>
                             </h2>
-                            <WebinarRegistrationForm />
+                            <WebinarRegistrationForm tags={['linkedin webinar']} />
                         </motion.div>
                     </div>
                 </div>
@@ -373,7 +385,7 @@ export default function WebinarPage() {
                             <p className=" text-white mb-8 text-lg uppercase tracking-widest flex items-center justify-center gap-2">
                                 <span>Register here</span>
                             </p>
-                            <WebinarRegistrationForm />
+                            <WebinarRegistrationForm tags={['linked webinar']} />
                         </div>
                     </div>
                 </div>

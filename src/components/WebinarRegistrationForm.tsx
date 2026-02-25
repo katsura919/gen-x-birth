@@ -5,9 +5,10 @@ import { Loader2, CheckCircle2 } from 'lucide-react';
 
 interface WebinarRegistrationFormProps {
     onSuccess?: () => void;
+    tags?: string[];
 }
 
-export default function WebinarRegistrationForm({ onSuccess }: WebinarRegistrationFormProps) {
+export default function WebinarRegistrationForm({ onSuccess, tags }: WebinarRegistrationFormProps) {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -29,7 +30,7 @@ export default function WebinarRegistrationForm({ onSuccess }: WebinarRegistrati
                 },
                 body: JSON.stringify({
                     ...formData,
-                    tags: ['webinar'],
+                    tags: tags || ['webinar'],
                 }),
             });
 

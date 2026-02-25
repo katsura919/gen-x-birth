@@ -67,7 +67,7 @@ export default function WebinarPage() {
                             <h2 className="font-playfair text-3xl font-bold text-white mb-6 text-center">
                                 <span className="text-white">Reserve Your Spot</span>
                             </h2>
-                            <WebinarRegistrationForm />
+                            <WebinarRegistrationForm tags={['webinar']}/>
                         </motion.div>
                     </div>
                 </div>
@@ -304,7 +304,7 @@ export default function WebinarPage() {
                             <p className=" text-white mb-8 text-lg uppercase tracking-widest flex items-center justify-center gap-2">
                                 <span>Register here</span>
                             </p>
-                            <WebinarRegistrationForm />
+                            <WebinarRegistrationForm tags={['webinar']}/>
                         </div>
 
                         <p className="font-inter text-sm text-text-secondary">
