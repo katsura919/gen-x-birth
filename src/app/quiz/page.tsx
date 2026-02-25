@@ -136,19 +136,17 @@ export default function QuizPage() {
                 <button
                   key={option.value}
                   onClick={() => handleOptionSelect(option.value)}
-                  className={`w-full rounded-xl border-2 p-8 text-left transition-all duration-200 ${
-                    answers[currentQuestion] === option.value
+                  className={`w-full rounded-xl border-2 p-8 text-left transition-all duration-200 ${answers[currentQuestion] === option.value
                       ? "border-primary bg-primary/5 text-accent-dark shadow-md"
                       : "border-transparent bg-white text-text-primary hover:border-gray-200 hover:bg-gray-50 shadow-sm"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-6">
                     <span
-                      className={`flex h-10 w-10 min-w-10 items-center justify-center rounded-full border text-base font-bold ${
-                        answers[currentQuestion] === option.value
+                      className={`flex h-10 w-10 min-w-10 items-center justify-center rounded-full border text-base font-bold ${answers[currentQuestion] === option.value
                           ? "border-primary bg-primary text-white"
                           : "border-gray-300 text-gray-500"
-                      }`}
+                        }`}
                     >
                       {option.text.charAt(0)}
                     </span>
@@ -324,9 +322,28 @@ export default function QuizPage() {
                   </ul>
                 </div>
               </div>
-            </div>
 
- 
+              {/* Book a Call CTA */}
+              <div className="mt-20 mx-auto max-w-4xl text-center bg-white p-10 md:p-16 rounded-[2.5rem] border-2 border-primary/5 shadow-xl relative overflow-hidden group hover:border-primary/20 transition-colors duration-500">
+                <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-secondary/20 transition-colors duration-700" />
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 group-hover:bg-primary/10 transition-colors duration-700" />
+
+                <div className="relative z-10 space-y-8">
+                  <h3 className="font-playfair text-3xl md:text-5xl font-bold text-primary">
+                    Ready to Reclaim Your Authority?
+                  </h3>
+                  <p className="font-inter text-text-primary/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    You’ve seen the patterns. Now it’s time to rewrite the rules. Let’s map out your personalized strategic pivot.
+                  </p>
+                  <Link
+                    href="/booking"
+                    className="inline-block rounded-full bg-accent-dark px-10 py-5 text-lg font-bold text-white shadow-lg hover:bg-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl uppercase tracking-wider"
+                  >
+                    Book Your Strategy Call
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>

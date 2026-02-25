@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Aurora from '@/components/Aurora';
 import WebinarRegistrationForm from '@/components/WebinarRegistrationForm';
 import {
     CheckCircle2,

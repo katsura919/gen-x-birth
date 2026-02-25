@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Logo } from "./Logo";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isWebinarDropdownOpen, setIsWebinarDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,17 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsWebinarDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   useEffect(() => {
@@ -42,19 +55,60 @@ export default function Header() {
         </div>
 
         {/* Desktop CTAs */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-6 lg:gap-8 md:flex">
           <a
-            href="/booking"
-            className="rounded-full border border-accent-dark bg-accent-dark px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white hover:bg-primary hover:text-white cursor-pointer transition-colors duration-500"
+            href="/quiz"
+            className="font-dm-sans text-sm font-bold uppercase tracking-wider text-primary hover:text-secondary transition-colors duration-300"
           >
-            Book a Call
+            Take Quiz
           </a>
 
-          <a
-            href="/webinar"
-            className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-cta-hover hover:shadow-lg cursor-pointer transition-colors duration-500  "
+          <div
+            className="relative"
+            ref={dropdownRef}
           >
-            Join Webinar
+            <button
+              onClick={() => setIsWebinarDropdownOpen(!isWebinarDropdownOpen)}
+              className={`flex items-center gap-1 font-dm-sans text-sm font-bold uppercase tracking-wider transition-colors duration-300 ${isWebinarDropdownOpen ? 'text-secondary' : 'text-primary hover:text-secondary'}`}
+            >
+              Webinars
+              <svg
+                className={`w-4 h-4 transition-transform duration-200 ${isWebinarDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {/* Desktop Dropdown */}
+            {isWebinarDropdownOpen && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-72 bg-white rounded-2xl shadow-xl border border-primary/10 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <a
+                  href="/webinar/how-to-leverage-your-income-2026"
+                  onClick={() => setIsWebinarDropdownOpen(false)}
+                  className="block px-6 py-4 text-sm font-dm-sans font-medium text-text-primary hover:bg-bg-light hover:text-secondary transition-colors"
+                >
+                  How to Leverage Your Income 2026
+                </a>
+                <div className="h-px w-full bg-primary/5" />
+                <a
+                  href="/webinar/reclaim-your-authority"
+                  onClick={() => setIsWebinarDropdownOpen(false)}
+                  className="block px-6 py-4 text-sm font-dm-sans font-medium text-text-primary hover:bg-bg-light hover:text-secondary transition-colors"
+                >
+                  Reclaim Your Authority
+                </a>
+              </div>
+            )}
+          </div>
+
+          <a
+            href="/booking"
+            className="rounded-full bg-secondary px-6 py-2.5 font-dm-sans text-sm font-bold uppercase tracking-wider text-white shadow-md hover:bg-cta-hover hover:shadow-lg cursor-pointer transition-colors duration-500"
+          >
+            Book a Call
           </a>
         </div>
 
@@ -101,19 +155,57 @@ export default function Header() {
         <div className="border-t border-gray-100 bg-white px-6 pb-6 pt-4 shadow-md md:hidden">
           <div className="flex flex-col items-center gap-4">
             <a
-              href="/booking"
+              href="/quiz"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full max-w-xs rounded-full border-2 border-accent-dark bg-accent-dark py-3.5 text-center font-dm-sans text-base font-bold uppercase tracking-wider text-white"
+              className="block w-full py-2 text-center font-dm-sans text-base font-bold uppercase tracking-wider text-primary"
             >
-              Book a Call
+              Take Quiz
             </a>
 
+            <div className="w-full">
+              <button
+                onClick={() => setIsWebinarDropdownOpen(!isWebinarDropdownOpen)}
+                className="flex w-full items-center justify-center gap-1 py-2 font-dm-sans text-base font-bold uppercase tracking-wider text-primary"
+              >
+                Webinars
+                <svg
+                  className={`w-4 h-4 transition-transform duration-200 ${isWebinarDropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Mobile Accordion */}
+              {isWebinarDropdownOpen && (
+                <div className="flex flex-col items-center gap-3 pt-2 pb-4 px-4 bg-bg-light/50 rounded-xl mt-2">
+                  <a
+                    href="/webinar/how-to-leverage-your-income-2026"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-center text-sm font-dm-sans font-medium text-text-primary hover:text-secondary"
+                  >
+                    How to Leverage Your Income 2026
+                  </a>
+                  <div className="w-12 h-px bg-primary/10 mx-auto" />
+                  <a
+                    href="/webinar/reclaim-your-authority"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block text-center text-sm font-dm-sans font-medium text-text-primary hover:text-secondary"
+                  >
+                    Reclaim Your Authority
+                  </a>
+                </div>
+              )}
+            </div>
+
             <a
-              href="/webinar"
+              href="/booking"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full max-w-xs rounded-full bg-secondary py-3.5 text-center font-dm-sans text-base font-bold uppercase tracking-wider text-white shadow-lg"
+              className="block w-full max-w-xs rounded-full bg-secondary py-3.5 text-center font-dm-sans text-base font-bold uppercase tracking-wider text-white shadow-lg mt-2"
             >
-              Join Webinar
+              Book a Call
             </a>
           </div>
         </div>
