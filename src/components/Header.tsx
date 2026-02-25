@@ -58,7 +58,7 @@ export default function Header() {
         <div className="hidden items-center gap-6 lg:gap-8 md:flex">
           <a
             href="/quiz"
-            className="font-dm-sans text-sm font-bold uppercase tracking-wider text-primary hover:text-secondary transition-colors duration-300"
+            className="font-dm-sans text-sm font-bold uppercase tracking-wider text-primary hover:text-secondary transition-colors duration-300 cursor-pointer"
           >
             Take Quiz
           </a>
@@ -69,7 +69,7 @@ export default function Header() {
           >
             <button
               onClick={() => setIsWebinarDropdownOpen(!isWebinarDropdownOpen)}
-              className={`flex items-center gap-1 font-dm-sans text-sm font-bold uppercase tracking-wider transition-colors duration-300 ${isWebinarDropdownOpen ? 'text-secondary' : 'text-primary hover:text-secondary'}`}
+              className={`flex items-center gap-1 font-dm-sans text-sm font-bold uppercase tracking-wider transition-colors duration-300 ${isWebinarDropdownOpen ? 'text-secondary' : 'text-primary hover:text-secondary cursor-pointer'}`}
             >
               Webinars
               <svg

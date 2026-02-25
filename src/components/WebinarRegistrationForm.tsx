@@ -121,7 +121,7 @@ export default function WebinarRegistrationForm({ onSuccess }: WebinarRegistrati
             <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full group relative overflow-hidden rounded-full bg-secondary py-4 font-dm-sans text-base font-bold uppercase tracking-wider text-white shadow-lg transition-all duration-300 hover:bg-cta-hover hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100"
+                className="w-full group relative overflow-hidden rounded-full bg-secondary py-3 sm:py-4 px-2 sm:px-4 font-dm-sans text-[13px] sm:text-base font-bold uppercase tracking-wide sm:tracking-wider text-white shadow-lg transition-all duration-300 hover:bg-cta-hover hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:hover:scale-100 cursor-pointer"
             >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                     {status === 'loading' ? (
@@ -130,7 +130,7 @@ export default function WebinarRegistrationForm({ onSuccess }: WebinarRegistrati
                             Processing...
                         </>
                     ) : (
-                        'I AM READY! RESERVE MY SEAT!'
+                        'RESERVE MY SEAT!'
                     )}
                 </span>
             </button>

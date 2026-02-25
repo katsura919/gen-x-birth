@@ -45,7 +45,7 @@ export default function WebinarPage() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="bg-primary/95 backdrop-blur-md rounded-3xl p-8 lg:p-10 shadow-2xl border border-white/10"
+                            className="bg-primary/95 backdrop-blur-md rounded-3xl p-6 md:p-8 lg:p-10 shadow-2xl border border-white/10"
                         >
                             <h2 className="font-playfair text-3xl font-bold text-white mb-6 text-center">
                                 <span className="text-white">Reserve Your Spot</span>
@@ -369,7 +369,7 @@ export default function WebinarPage() {
                             </p>
                         </div>
 
-                        <div className="bg-primary backdrop-blur-md p-10 rounded-[2.5rem] shadow-2xl border border-white max-w-xl mx-auto ">
+                        <div className="bg-primary backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-3xl md:rounded-[2.5rem] shadow-2xl border border-white max-w-xl mx-auto">
                             <p className=" text-white mb-8 text-lg uppercase tracking-widest flex items-center justify-center gap-2">
                                 <span>Register here</span>
                             </p>
