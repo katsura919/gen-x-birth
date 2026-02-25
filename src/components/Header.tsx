@@ -90,7 +90,7 @@ export default function Header() {
                   onClick={() => setIsWebinarDropdownOpen(false)}
                   className="block px-6 py-4 text-sm font-dm-sans font-medium text-text-primary hover:bg-bg-light hover:text-secondary transition-colors"
                 >
-                  How to Leverage Your Income 2026
+                  How to Leverage Your Income
                 </a>
                 <div className="h-px w-full bg-primary/5" />
                 <a
