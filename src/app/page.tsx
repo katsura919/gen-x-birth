@@ -11,6 +11,7 @@ import TheRealIssue from "@/components/TheRealIssue";
 import WhatChanges from "@/components/WhatChanges";
 import MomentOfChoice from "@/components/MomentOfChoice";
 import TwoWaysForward from "@/components/TwoWaysForward";
+import NextSteps from "@/components/NextSteps";
 import { ReactLenis, useLenis } from "lenis/react";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <WhatsHappening />
       <MeetCeleste />
       <AboutMe />
+      <NextSteps />
       <TwoWaysForward />
     </ReactLenis>
   );
