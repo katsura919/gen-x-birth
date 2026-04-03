@@ -50,7 +50,7 @@ export default function Header() {
             Take Quiz
           </a>
 
-          <a
+          {/* <a
             href="/rebirth-mentor"
             className="font-dm-sans text-sm font-bold uppercase tracking-wider text-primary hover:text-secondary transition-colors duration-300 cursor-pointer"
           >
@@ -62,7 +62,7 @@ export default function Header() {
             className="font-dm-sans text-sm font-bold uppercase tracking-wider text-primary hover:text-secondary transition-colors duration-300 cursor-pointer"
           >
             Work With Me
-          </a>
+          </a> */}
 
           <a
             href="/webinar/how-to-leverage-your-income-2026"
